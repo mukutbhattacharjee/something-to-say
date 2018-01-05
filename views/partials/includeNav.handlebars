@@ -1,0 +1,38 @@
+<div class='container'>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            {{#if session.currentUser}}
+            <div class="navbar-header">
+                <span class="navbar-brand">Hi {{session.currentUser}}</span>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/stories">All stories</a>
+                </li>
+                <li>
+                    <a href="/createStory">Write your story</a>
+                </li>
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+            </ul>
+
+            {{else}}
+            <div class="navbar-header">
+                <span class="navbar-brand">World is full of stories...</span>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/stories">All stories</a>
+                </li>
+
+                <li>
+                    <a href="/createStory">Write your story</a>
+                </li>
+            </ul>
+
+            {{/if}}
+        </div>
+    </nav>
+</div>

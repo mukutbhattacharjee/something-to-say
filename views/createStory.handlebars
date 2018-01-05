@@ -1,0 +1,20 @@
+{{>includeNav}}
+<div class="container">
+    <div class="container-fluid">
+        <h1>Create your story</h1>
+        <br>
+        <form action="/story" method="post">
+            <div class="form-group">
+                <label for="inputTitle">Give an attractive title</label>
+                <input type="text" name="title" id="inputTitle" class="form-control">
+                <br>
+                <label for="inputSummary">Gist it here</label>
+                <input type="text" name="summary" id="inputSummary" class="form-control">
+                <br>
+                <label for="inputStory">Let your expressions speak for you</label>
+                <textarea  rows="10" type="text" name="story" id="inputStory" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+    </div>
+</div>

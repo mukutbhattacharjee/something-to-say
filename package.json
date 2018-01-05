@@ -1,0 +1,23 @@
+{
+  "name": "assignment5",
+  "version": "1.0.0",
+  "description": "leave the marks application for assignment",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mukut",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.0-rc1"
+  },
+  "config": {
+    "port":"4002"
+  }
+}

@@ -1,0 +1,28 @@
+{{>includeNav}}
+<div class="container">
+<div class="jumbotron jumbotron-fluid">
+        <h2 class="text-info">{{story.title}}</h2>
+        <div class="row text muted">
+            <div class="col-lg-12">
+                <h5 class="text-danger">Created by {{story.author}} on {{story.date}}</h5>
+            </div>
+        </div>
+        <hr class="my-4">
+        <p class="lead text-justify">{{story.content}}</p>
+        <hr class="my-4">
+        <p>Comments:</p>
+        {{#each story.comments}}
+            {{>includeComment}}
+        {{/each}}
+        <br>    
+        {{#if session.currentUser}}
+            <form action="/{{story.slug}}/comment" method="post">
+                <label for="inputComment">Post your comment</label>
+                <textarea  rows="5" type="text" name="commentBody" id="inputComment" class="form-control"></textarea>
+                <br>
+                <button type="submit" class="btn btn-primary">Post</button>
+            </form>
+        {{/if}}
+
+</div>
+</div>
