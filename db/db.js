@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
-//var dbURL = "mongodb://root:root@ds153705.mlab.com:53705/something_to_say";
-var dbURL = "mongodb://127.0.0.1/something_to_say_enhanced";
+var dbURL = "mongodb://root:root@ds153705.mlab.com:53705/something_to_say";
+//var dbURL = "mongodb://127.0.0.1/something_to_say_enhanced";
 mongoose.connect(dbURL);
 
 mongoose.connection.on('connected',()=>{
